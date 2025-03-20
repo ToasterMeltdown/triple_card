@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,704&family=Lexend+Deca&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+    --Very-light-gray: hsl(0, 0%, 95%); /*  (background, headings, buttons) */
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-size: 15px;
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-light-gray);
+}
+
+.full_container{
+    display: flex;
+    flex-direction: row;
+    margin: 100px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.container{
+    height: 500px;
+    width: 250px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container img{
+    width: 80px;
+}
+
+.container h1{
+    font-family: "Big Shoulders";
+    font-weight:700;
+    color: var(--Very-light-gray);
+    font-size: 44px;
+}
+
+.container p{
+    color: var(--Very-light-gray);
+    font-size: 15px;
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    line-height: 1.75em;
+    padding-right: 30px;
+}
+
+.container button{
+    height: 60px;
+    width: 200px;
+    border-radius: 40px;
+    border: none;
+    background-color: var(--Very-light-gray);
+    font-size: 16px;
+    font-family: "Lexend Deca";
+    font-weight: 400;
+    margin-top: 60px;
+}
+
+#sedan_section button{
+    color: var(--Bright-orange);
+}
+
+#suv_section button{
+    color:var(--Very-dark-cyan);
+}
+
+#luxury_section button{
+    color:var(--Dark-cyan);
+}
+
+#sedan_section{
+    background-color: var(--Bright-orange);
+}
+
+#suv_section{
+    background-color: var(--Dark-cyan);
+}
+
+#luxury_section{
+    background-color: var(--Very-dark-cyan);
+}
+
+
+@media (max-width: 1000px) {
+    .full_container {
+        flex-direction: column;
+        width: 90%; 
+        max-width: 400px; 
+        margin: 50px auto;
+        border-radius: 15px; 
+        overflow: hidden; 
+    }
+
+    .container {
+        width: 100%; 
+        padding: 50px; 
+        display: flex;
+        flex-direction: column;
+    }
+    .container p{
+        width: 70%;
+    }
+}
